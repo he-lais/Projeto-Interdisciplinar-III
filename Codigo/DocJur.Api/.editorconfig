@@ -1,0 +1,16 @@
+# To learn more about .editorconfig see https://aka.ms/editorconfigdocs
+
+# All files
+[*]
+indent_style = space
+
+# Xml files
+
+# IDE0022: Use block body for methods
+csharp_style_expression_bodied_methods = when_on_single_line:silent
+
+# IDE0021: Use block body for constructors
+csharp_style_expression_bodied_constructors = when_on_single_line:silent
+
+[*.xml]
+indent_size = 2

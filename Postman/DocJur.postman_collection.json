@@ -1,0 +1,367 @@
+{
+	"info": {
+		"_postman_id": "92b9a426-434f-4c15-903c-afa1b87ca342",
+		"name": "DocJur",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"admin\",\r\n    \"password\": \"lakjd9082309213\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Api}}user/login",
+							"host": [
+								"{{Api}}user"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Api}}user/list",
+							"host": [
+								"{{Api}}user"
+							],
+							"path": [
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Details",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"UserId\": \"fee5ac67-c09a-486b-a635-64fefbc0d562\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Api}}user/details",
+							"host": [
+								"{{Api}}user"
+							],
+							"path": [
+								"details"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Username\": \"teste\",\r\n    \"Email\": \"teste@mail.com\",\r\n    \"Password\": \"teste\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Api}}user/create",
+							"host": [
+								"{{Api}}user"
+							],
+							"path": [
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Username\": \"teste\",\r\n    \"Email\": \"teste@mail.com\",\r\n    \"Password\": \"teste\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Api}}user/update",
+							"host": [
+								"{{Api}}user"
+							],
+							"path": [
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"UserId\": \"29db91bd-d240-4fd4-8ea5-4c019fddd02e\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Api}}user/delete",
+							"host": [
+								"{{Api}}user"
+							],
+							"path": [
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "DocumentType",
+			"item": [
+				{
+					"name": "Create",
+					"item": [
+						{
+							"name": "Solicitação de súbsidios para análise de fraude",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Solicitação de súbsidios para análise de fraude\",\r\n    \"content\": \"Resumo da a\\u00E7\\u00E3o: A parte reclamante alega em s\\u00EDntese que \\u00E9 pensionista\\/aposentada pelo INSS, entretanto, teve realizado em seu benef\\u00EDcio empr\\u00E9stimo [cartaoCredito], com desconto em seu benef\\u00EDcio referente a RMC (reserva de margem consign\\u00E1vel), no valor de [valorEmprestimo] - Contrato: [numeroContrato] ; Data de Inclus\\u00E3o: [dataInclusao] ; Limite: [valorEmprestimo]; Valor: [valorParcelas]. Assevera que nunca foi informado de tal contrata\\u00E7\\u00E3o, com a qual n\\u00E3o concorda.\\r\\n\\r\\nSubs\\u00EDdios: Esclarecimentos. Gentileza, caso se trate de contrato de cart\\u00E3o de cr\\u00E9dito, anexar ao sistema c\\u00F3pia da MOVIMENTA\\u00C7\\u00C3O FINANCEIRA E FATURAS do contrato registrado sob o n\\u00FAmero [numeroContrato] . Favor fornecer esclarecimentos quanto ao produto do contrato [numeroContrato] (esclarecimento completo sobre a opera\\u00E7\\u00E3o, faturas, informa\\u00E7\\u00F5es, telas), se a parte entrou em contato com o Inter para notificar e quais medidas foram tomadas a partir desse contato.\\r\\n\\r\\nSubs\\u00EDdios: Considerando que se trata de uma negativa de contrata\\u00E7\\u00E3o verificar se a parte Autora realmente celebrou o contrato de empr\\u00E9stimo consignado registrado sob o n\\u00FAmero [numeroContrato] .\\r\\n\\r\\nSubs\\u00EDdios: Providenciar a c\\u00F3pia do contrato de empr\\u00E9stimo consignado registrado sob o n\\u00FAmero [numeroContrato] , bem como documentos do Autor apresentados no momento da contrata\\u00E7\\u00E3o.\\r\\n\\r\\nSubs\\u00EDdios: Providenciar os extratos, TEDs ou ordens de pagamento do contrato de empr\\u00E9stimo consignado registrado sob o n\\u00FAmero [numeroContrato] .\\r\\n\\r\\nPEDIDOS DA INICIAL:\\r\\n1) Tutela antecipada: [pedidoTutela];\\r\\n2) Declara\\u00E7\\u00E3o de inexist\\u00EAncia da contrata\\u00E7\\u00E3o de EMPR\\u00C9STIMO CONSIGNADO DA RMC (cart\\u00E3o\\r\\nde cr\\u00E9dito), igualmente a RESERVA DE MARGEM CONSIGN\\u00C1VEL;\\r\\n3) Restitui\\u00E7\\u00E3o em dobro do ind\\u00E9bito;\\r\\n4) Readequa\\u00E7\\u00E3o do empr\\u00E9stimo de cart\\u00E3o de cr\\u00E9dito consignado (RMC) para empr\\u00E9stimo\\r\\nconsignado;\\r\\n5) Danos morais: [valorDanosMorais];\\r\\n6) Apresenta\\u00E7\\u00E3o da c\\u00F3pia do contrato e faturas.\\r\\nCPF n\\u00FAmero [cpf]\",\r\n    \"fields\": [\r\n        {\r\n            \"label\": \"Objeto da ação é cartão de crédito?\",\r\n            \"name\": \"cartaoCredito\",\r\n            \"fieldType\": 1\r\n        },\r\n        {\r\n            \"label\": \"Qual o valor do empréstimo?\",\r\n            \"name\": \"valorEmprestimo\",\r\n            \"fieldType\": 2\r\n        },\r\n        {\r\n            \"label\": \"Qual o número do contrato?\",\r\n            \"name\": \"numeroContrato\",\r\n            \"fieldType\": 3\r\n        },\r\n        {\r\n            \"label\": \"Qual a data de inclusão do contrato?\",\r\n            \"name\": \"dataInclusao\",\r\n            \"fieldType\": 4\r\n        },\r\n        {\r\n            \"label\": \"Qual o valor das parcelas?\",\r\n            \"name\": \"valorParcelas\",\r\n            \"fieldType\": 2\r\n        },\r\n        {\r\n            \"label\": \"Qual o pedido de tutela antecipada?\",\r\n            \"name\": \"pedidoTutela\",\r\n            \"fieldType\": 3\r\n        },\r\n        {\r\n            \"label\": \"Qual o valor do pedido de danos morais?\",\r\n            \"name\": \"valorDanosMorais\",\r\n            \"fieldType\": 2\r\n        },\r\n        {\r\n            \"label\": \"Qual o CPF da parte?\",\r\n            \"name\": \"cpf\",\r\n            \"fieldType\": 5\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Api}}documentType/create",
+									"host": [
+										"{{Api}}documentType"
+									],
+									"path": [
+										"create"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "List",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Api}}documentType/list",
+							"host": [
+								"{{Api}}documentType"
+							],
+							"path": [
+								"list"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Document",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"DocumentTypeId\": \"3d191ed6-6a0f-49a7-af4a-d3c680cbaf09\",\r\n    \"UserId\": \"4d191ed6-6a0f-49n7-af4a-d3c680cbaf09\",\r\n    \"Fields\": [\r\n        {\r\n            \"FieldType\": \"YesOrNo\",\r\n            \"Content\": \"Yes\"\r\n        },\r\n        {\r\n            \"FieldType\": \"Text\",\r\n            \"Content\": \"Teste\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Api}}document/create",
+							"host": [
+								"{{Api}}document"
+							],
+							"path": [
+								"create"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Test API",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Api}}",
+					"host": [
+						"{{Api}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
